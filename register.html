@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        input,textarea,data,select{
+            background-color: antiquewhite;
+            color: #000;
+            font-size: 18px;
+            margin: 2mm;
+        }
+        body{
+            background-color: aliceblue;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="get" action="success.html">
+        <table>
+            <tr>
+                <td><label>Name</label></td>
+                <td><input type="text" name="txtName" required="required" minlength="5" maxlength="15" min="5"></td>
+            </tr>
+            <tr>
+                <td><label>Email</label></td>
+                <td><input type="text" name="txtEmail" required></td>
+            </tr>
+            <tr>
+                <td><label>Phone No</label></td>
+                <td><input type="text" name="txtphone" required ></td>
+            </tr>
+            <tr>
+                <td><label>Gender</label></td>
+                <td><input type="radio" name="radGender" value="M">MALE
+                    <input type="radio" name="radGender" value="F">FEMALE
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="chksubscribe" value="Yes">Subscribe for updates
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Annual Salary</label>
+                </td>
+                <td>
+                    <input type="number" name="numSalary">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <Label>Date of Birth</Label>
+                </td>
+                <td>
+                    <input type="date" name="dateDOB">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <Label>Primary Skill</Label>
+                </td>
+                <td>
+                    <select name="skill">
+                        <option value="J">Java</option>
+                        <option value="C">C++</option>
+                        <option value="H">HTML</option>>
+                        <option value="A">Angular</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Comments</label></td>
+                <td><textarea rows="10" cols="40" name="comments"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Sign Up"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
