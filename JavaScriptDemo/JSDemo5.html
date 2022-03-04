@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str1,str2;
+        str1=window.prompt("Enter Number 1");
+        str2=window.prompt("Enter Number 2");
+        var n1=window.parseInt(str1);
+        var n2=window.parseInt(str2);
+
+        if(isNaN(n1))
+            alert("Please enter Number 1")
+        if(isNaN(n2))
+            alert("Please enter Number 2")
+
+        var result=n1+n2;
+        window.alert("The sum ="+ result)
+    </script>
+</body>
+</html>

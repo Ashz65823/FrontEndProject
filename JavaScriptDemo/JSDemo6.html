@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome!!</h1>
+    <script>
+        var name=window.prompt("Enter employee name")
+        var sal=window.prompt("enter salary");
+        var basicSal=window.parseFloat(sal);
+        if(window.isNaN(basicSal))
+            alert("Please enter a valid Salary")
+        else
+            window.alert(name+" Basic Salary="+basicSal*0.30);
+    </script>
+</body>
+</html>
