@@ -8,5 +8,7 @@ function f1()
     }
     return f2;
 }
-var r=f1();//this will have f2 
+var r=f1();//this will point f2 since f2 is returned
 r();
+
+//functions can return function

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    label{
+        
+        margin: 10px;
+    }
+    input{
+        margin: 10px;
+        border: none;
+        border-bottom: 2px solid;
+    }
+    button {
+        height: 10mm;
+        width: 3cm;
+        margin-left: 20px;
+        margin-top: 3mm;
+        border: groove rgb(132, 132, 194) thick;
+        border-radius: 10px;
+    }
+</style>
+<script src="./script15.js"></script>
+<script>
+    function f1() {
+        var Register = window.document.forms[0].elements[0].value;
+        var Name = window.document.forms[0].elements[1].value;
+        var Mark1 = window.document.forms[0].elements[2].value;
+        var Mark2 = window.document.forms[0].elements[3].value;
+        var Mark3 = window.document.forms[0].elements[4].value;
+
+        var m1 = parseFloat(Mark1);
+        var m2 = parseFloat(Mark2);
+        var m3 = parseFloat(Mark3);
+        var stud1 = new Student(Register, Name, m1, m2, m3);
+        var result = stud1.computeTotalMarks();
+        alert("Total mark=" + result);
+    }
+    function f2() {
+        var Register = window.document.forms[0].elements[0].value;
+        var Name = window.document.forms[0].elements[1].value;
+        var Mark1 = window.document.forms[0].elements[2].value;
+        var Mark2 = window.document.forms[0].elements[3].value;
+        var Mark3 = window.document.forms[0].elements[4].value;
+
+        var m1 = parseFloat(Mark1);
+        var m2 = parseFloat(Mark2);
+        var m3 = parseFloat(Mark3);
+        var stud1 = new Student(Register, Name, m1, m2, m3);
+        var result = stud1.computeAverage();
+        alert("Average mark=" + result);
+    }
+</script>
+
+<body bgColor="Lightblue">
+    <h1 style="text-align: center;text-decoration: wavy;">Register</h1>
+    <form >
+        <table style="background-color: white;padding: 1cm; border: groove thick;border-radius: 10px;" align="center">
+            <tr>
+                <td>
+                    <label>Register Number</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Name</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Mark1</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Mark2</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Mark3</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="f1()">Total Mark</button>
+                </td>
+                <td>
+                    <button onclick="f2()">Average</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

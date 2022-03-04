@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./Calc.js"></script>
+</head>
+<style>
+    input {
+        height: 5mm;
+        margin-left: 10px;
+        margin-bottom: 8px;
+        border: none;
+        border-bottom: 1px solid black;
+        background-color: transparent;
+    }
+
+    table {
+        margin-top: 100px;
+        background-color: white;
+        padding: 1cm;
+        border-radius: 10%;
+        border: solid black;
+    }
+
+    button {
+        height: 10mm;
+        width: 3cm;
+        margin-left: 20px;
+        margin-top: 3mm;
+        border: groove blue thick;
+        border-radius: 10px;
+    }
+</style>
+<script>
+    function f1() {
+        var str1 = window.document.forms[0].elements[0].value;
+        var str2 = window.document.forms[0].elements[1].value;
+        var n1 = parseFloat(str1);
+        var n2 = parseFloat(str2);
+        var cal = new Calculator(n1, n2);
+        var result = cal.getSum();
+        alert(result);
+
+    }
+    function f2() {
+        var str1 = window.document.forms[0].elements[0].value;
+        var str2 = window.document.forms[0].elements[1].value;
+        var n1 = parseFloat(str1);
+        var n2 = parseFloat(str2);
+        var cal = new Calculator(n1, n2);
+        var result = cal.getSubtract();
+        alert(result);
+    }
+    function f3() {
+        var str1 = window.document.forms[0].elements[0].value;
+        var str2 = window.document.forms[0].elements[1].value;
+        var n1 = parseFloat(str1);
+        var n2 = parseFloat(str2);
+        var cal = new Calculator(n1, n2);
+        var result = cal.getProduct();
+        alert(result);
+    }
+
+    function f4() {
+        var str1 = window.document.forms[0].elements[0].value;
+        var str2 = window.document.forms[0].elements[1].value;
+        var n1 = parseFloat(str1);
+        var n2 = parseFloat(str2);
+        var cal = new Calculator(n1, n2);
+        var result = cal.getDivident();
+        alert(result);
+    }
+</script>
+
+<body bgcolor="lightblue">
+    <form>
+        <table align="center">
+            <tr>
+                <td>
+                    <label>First Name</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Last Name</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="f1()">Sum</button>
+                </td>
+                <td>
+                    <button onclick="f2()">Subtract</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="f3()">Multiply</button>
+                </td>
+                <td>
+                    <button onclick="f4()">Divide</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
